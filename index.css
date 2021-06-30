@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    height: 200vh;
+}
+
+nav {
+    vertical-align: top;
+    position: fixed 0;
+    background-color: rgb(48, 48, 70);
+    width: 100%;
+    align-items: center;
+}
+
+nav a {
+    font-size: 1.5em;
+    color: rgb(168, 168, 168);
+    
+}
+
+.center-text {
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
