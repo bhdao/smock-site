@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mock Site</title>
-    <link rel="stylesheet" href="./index.css"/>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
 
-</head>
+  <body class="rock">
 
-
-
-
-<body class="rock">
     <nav class="center-text">
-        <div style="margin: auto">
-            <div class="left-text title">
-                <div class="font-large">There was a Mock Site</div>
-                <div>...about a poem about a rock in the middle of the road.</div>
-            </div>
-            <div class="navigation">
-                <div class="sub-nav">Home</div>
-                <div class="sub-nav">About</div>
-                <div class="sub-nav">Gallery</div>
-            </div>
-        </div>
-    </nav>    
     
+      <div style="margin: auto; display: flex">
+        
+        <div class="left-text title flex">
+    
+          <div class="font-large">There was a <em style="color:rgb(255, 162, 99)">Mock Site</em></div>
+    
+          <div>...about a poem about a <em style="color:rgb(255, 162, 99)">rock</em> in the middle of the road.</div>
+    
+        </div>
+        
+        <div class="navigation flex" style="justify-content: center">
+          <a href="https://allpoetry.com/In-The-Middle-Of-The-Road" target="_blank" class="sub-nav gradient"
+            >Poem Source</a
+          >
+          <a href="https://unsplash.com/@emilegt" class="sub-nav gradient" target="_blank">BG Source</a>
+          <a
+            href="https://brendandao.com"
+            target="_blank"
+            class="sub-nav gradient"
+            >Contact</a
+          >
+        </div>
+      
+      </div>
+    
+    </nav>
 
-    <div style="text-align: left; line-height: 1.5em; vertical-align: auto;" class="poem">
-        <p>
-            In the middle of the road there was a stone<br>
-            there was a stone in the middle of the road<br>
-            there was a stone<br>
-            in the middle of the road there was a stone.<br>
-            <br>
-            Never should I forget this event<br>
-            in the life of my fatigued retinas.<br>
-            Never should I forget that in the middle of the road<br>
-            there was a stone<br>
-            there was a stone in the middle of the road<br>
-            in the middle of the road there was a stone.  
+    <div class="poem-container">
+      <div class="poem-body flex">
+        <h1 class="poem-title" style="text-align: center; font-size: 3em;">In The Middle Of The Road</h1>
+        <hr>
+        <p class="poem-content">
+          In the middle of the road there was a stone<br />
+          there was a stone in the middle of the road<br />
+          there was a stone<br />
+          in the middle of the road there was a stone.<br />
+          <br />
+          Never should I forget this event<br />
+          in the life of my fatigued retinas.<br />
+          Never should I forget that in the middle of the road<br />
+          there was a stone<br />
+          there was a stone in the middle of the road<br />
+          in the middle of the road there was a stone.
         </p>
+        <p class="poem-credit">by <a class="author" href="https://en.wikipedia.org/wiki/Carlos_Drummond_de_Andrade" style="text-decoration: none;">Carlos Drummond de Andrade</a></p>
+      </div>
     </div>
-
-    <!-- <div>
-        <a href="https://unsplash.com/@emilegt" target=_blank>
-            <img style="max-width: 100%;" src="./images/rock.jpg" title="Photo by Jeremy Bishop on Unsplash"/>
-        </a>
-    </div> -->
-</body>
-
+  </body>
 </html>

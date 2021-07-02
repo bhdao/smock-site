@@ -5,6 +5,7 @@
   color: rgb(255, 252, 227);
 }
 
+
 body {
   margin: 0;
 }
@@ -13,18 +14,30 @@ nav {
   /* vertical-align: top;
     position: fixed 0;   */
   background-color: rgb(48, 62, 70);
-  width: 100%;
+  width: 80%;
+  margin: 20px auto 10px auto;
+  border-radius: 10px;
+  overflow: hidden;
   /* align-items: center;
-    align-content: center; */
+  align-content: center; */
+}
+
+hr {
+    width: 30%;
+    border: 2px rgb(255, 252, 227) solid
+}
+
+.author:hover {
+    color:rgb(255, 162, 99);
 }
 
 .center {
-  display: inline-block;
-  align-self: center;
+    display: inline-block;
+    align-self: center;
 }
 
 .center-text {
-  text-align: center;
+    text-align: center;
 }
 
 .font-large {
@@ -33,10 +46,11 @@ nav {
 
 .flex {
     display: flex;
+    align-items: center;
 }
 
 .left-text {
-  text-align: left;
+    text-align: left;
 }
 
 .no-margin {
@@ -44,30 +58,97 @@ nav {
 }
 
 .full-width {
-  width: 100%;
+    width: 100%;
 }
 
+.poem-body {
+    margin: 0 auto;
+    padding: 80px;
+    flex-direction: column;
+    width: auto;
+    display: inline-block;
+}
+
+.poem-container {
+    margin: 50px auto;
+    padding-bottom: 2%;
+    width: max-content;
+    background-image: linear-gradient(0, rgb(78, 69, 55),rgba(48, 62, 70));
+    border-radius: 20px;
+}
+
+
+.poem-content {
+    font-size: 2em;
+    line-height: 2em;
+}
+
+.poem-credit {
+    text-align: right;
+    font-size: 1.2em;
+    margin-top: 50px;
+}
+
+
 .rock {
-  background-image: url("./images/rock.jpg");
+  background-image:linear-gradient(180deg,rgb(207, 241, 255), #CCCCAAFF);
+  /* background-image: url("./images/rock.jpg"); */
   background-size: cover;
   background-attachment: fixed;
 }
 
 .title {
-    display: inline-block;
-    width: 45%;
-    /* margin: 20px 0; */
+    flex-grow: 1;
+    margin: auto auto auto 7.5%;
+    flex-direction: column;
+    align-content: center;
+    align-self: stretch;
 }
 
 .navigation {
-  display: inline-block;
-  width: 45%;
+  flex-grow: 8;
+  height: 125px;
 }
 
 .sub-nav {
-  display: inline-block;
-  max-width: 33%;
-  font-size: 1.5em;
-  padding: 0 10%;
-  color: rgb(255, 252, 227);
+    display: flex;
+    font-size: 1.6em;
+    padding: 0 5%;
+    width: fit-content;
+    color: rgb(255, 252, 227);
+    align-self: stretch;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    transition: ease-out 0.5s;
+    white-space:nowrap;
+}
+
+.sub-nav::before {
+    position: absolute;
+    content: "";
+    top: 45%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(
+        0,
+        rgb(255, 162, 99),
+        #11111100
+    );
+    z-index: -1;
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+}
+    
+.sub-nav:hover::before{
+    opacity: 1;
+}
+
+.sub-nav:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+    font-size: 2em;
+    transition: ease 0.5s;
 }
