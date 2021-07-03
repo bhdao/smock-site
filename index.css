@@ -1,27 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600&display=swap");
+
+.box-container {
+  background-color: "beige";
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box {
+  width: 20%;
+  /* flex: 1; */
+  background-color: black;
+  border: 2px solid #aaa;
+  font-size: 2em;
+  padding: 10px;
+}
+
+* {
+  font-family: "Comfortaa", cursive;
+  color: rgb(255, 252, 227);
+}
+
 body {
-    margin: 0;
-    height: 200vh;
+  margin: 0;
 }
 
 nav {
-    vertical-align: top;
-    position: fixed 0;
-    background-color: rgb(48, 48, 70);
-    width: 100%;
-    align-items: center;
+  /* vertical-align: top;
+    position: fixed 0;   */
+  background-color: rgb(48, 62, 70);
+  width: 85%;
+  margin: 40px auto 10px auto;
+  padding-left: 3%;
+  border-radius: 10px;
+  overflow: hidden;
+  /* align-items: center;
+  align-content: center; */
 }
 
-nav a {
-    font-size: 1.5em;
-    color: rgb(168, 168, 168);
-    
+hr {
+  width: 40%;
+}
+
+.author:hover {
+  color: rgb(255, 162, 99);
+}
+
+.center {
+  display: inline-block;
+  align-self: center;
 }
 
 .center-text {
-    text-align: center;
+  text-align: center;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.title-font-large {
+  font-size: 2vw;
+}
+
+.title-font-small {
+  font-size: 0.83vw;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.left-text {
+  text-align: left;
 }
 
 .full-width {
-    width: 100%;
+  width: 100%;
 }
 
+.rock {
+  background-image: url("./images/rock.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.poem-body {
+  padding: 5% 10%;
+  flex-direction: column;
+  display: inline-block;
+}
+
+.poem-container {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 0 3% 2% 3%;
+  width: min-content;
+  background-image: linear-gradient(0, rgb(78, 69, 55), rgba(48, 62, 70));
+  border-radius: 20px;
+}
+
+.poem-content {
+  font-size: 1.8vw;
+  line-height: 1.5em;
+  white-space: nowrap;
+}
+
+.poem-credit {
+  text-align: right;
+  font-size: 1.5vw;
+  margin-top: 50px;
+}
+
+.rock {
+  background-image: linear-gradient(180deg, rgb(207, 241, 255), #ccccaaff);
+  background-image: url("./images/rock.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title {
+  flex: 1;
+  align-items: center;
+}
+
+.navigation {
+  text-align: center;
+  flex: 2;
+  height: 125px;
+}
+
+.navigation > a{
+    flex: 1;
+    display: flex;
+    font-size: 1.6vw;
+    flex: 1;
+    width: fit-content;
+    color: rgb(255, 252, 227);
+    align-self: stretch;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sub-nav {
+    margin: auto 0;
+    transition: ease-out 0.4s;
+}
+
+a.gradient::before {
+  position: absolute;
+  content: "";
+  top: 45%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(0, rgb(255, 162, 99), #11111100);
+  z-index: -1;
+  transition: opacity 0.4s ease-out;
+  opacity: 0;
+}
+
+a.gradient:hover::before{
+  opacity: 1;
+}
+
+a.gradient:hover{
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
+  font-size: 2vw;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .rock {
+    background-image: linear-gradient(180deg, rgb(255, 207, 207), #ccccaaff);
+    /* background-image: url("./images/rock.jpg"); */
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .rock {
+    background-image: linear-gradient(180deg, rgb(131, 57, 200), #ccccaaff);
+    /* background-image: url("./images/rock.jpg"); */
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
