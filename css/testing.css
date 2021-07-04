@@ -1,0 +1,22 @@
+.box-container {
+    background-color: "beige";
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .box {
+    width: 20%;
+    /* flex: 1; */
+    background-color: black;
+    border: 2px solid #aaa;
+    font-size: 2em;
+    padding: 10px;
+  }
+  
+  #one1.box.two {
+      background-color: red;
+  }
+  
+  #one1.box.two.three {
+      background-color: blue;
+  }

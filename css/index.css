@@ -1,19 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
-.box-container {
-  background-color: "beige";
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.box {
-  width: 20%;
-  /* flex: 1; */
-  background-color: black;
-  border: 2px solid #aaa;
-  font-size: 2em;
-  padding: 10px;
-}
 
 * {
   font-family: "Comfortaa", cursive;
@@ -37,25 +24,11 @@ nav {
   align-content: center; */
 }
 
-hr {
-  width: 40%;
-}
+.author {
+    font-family: 'Sriracha', cursive;}
 
 .author:hover {
   color: rgb(255, 162, 99);
-}
-
-.center {
-  display: inline-block;
-  align-self: center;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.no-margin {
-  margin: 0;
 }
 
 .title-font-large {
@@ -71,20 +44,6 @@ hr {
   align-items: center;
 }
 
-.left-text {
-  text-align: left;
-}
-
-.full-width {
-  width: 100%;
-}
-
-.rock {
-  background-image: url("./images/rock.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 .poem-body {
   padding: 5% 10%;
   flex-direction: column;
@@ -97,6 +56,7 @@ hr {
   margin: 50px auto;
   padding: 0 3% 2% 3%;
   width: min-content;
+  min-width: 500px;
   background-image: linear-gradient(0, rgb(78, 69, 55), rgba(48, 62, 70));
   border-radius: 20px;
 }
@@ -105,17 +65,19 @@ hr {
   font-size: 1.8vw;
   line-height: 1.5em;
   white-space: nowrap;
+  
 }
 
 .poem-credit {
   text-align: right;
   font-size: 1.5vw;
   margin-top: 50px;
+  padding: 0 2vw;
 }
 
 .rock {
   background-image: linear-gradient(180deg, rgb(207, 241, 255), #ccccaaff);
-  background-image: url("./images/rock.jpg");
+  background-image: url("../images/rock.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -132,18 +94,16 @@ hr {
 }
 
 .navigation > a{
-    flex: 1;
+    align-self: stretch; /*Makes link clickable across entire div*/
+    color: rgb(255, 252, 227);
     display: flex;
     font-size: 1.6vw;
     flex: 1;
-    width: fit-content;
-    color: rgb(255, 252, 227);
-    align-self: stretch;
     justify-content: center;
-    position: relative;
-    z-index: 1;
+    position: relative; /* Without this it makes the gradient apply to the entire screen */
     text-decoration: none;
-    white-space: nowrap;
+    width: fit-content;
+    z-index: 1; /*Required for gradient to appear on top*/
 }
 
 .sub-nav {
@@ -151,27 +111,9 @@ hr {
     transition: ease-out 0.4s;
 }
 
-a.gradient::before {
-  position: absolute;
-  content: "";
-  top: 45%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(0, rgb(255, 162, 99), #11111100);
-  z-index: -1;
-  transition: opacity 0.4s ease-out;
-  opacity: 0;
-}
-
-a.gradient:hover::before{
-  opacity: 1;
-}
-
-a.gradient:hover{
-  text-decoration: underline;
-  text-underline-offset: 0.1em;
-  font-size: 2vw;
+.it-me {
+    width: 20vw;
+    min-width: 200px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
